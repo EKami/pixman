@@ -1,12 +1,13 @@
-### This is a copied version from the original Pixman (https://gitlab.freedesktop.org/pixman/pixman)
+### This is a copied version from the original [Pixman](https://gitlab.freedesktop.org/pixman/pixman)
 
 This version adds the patch which avoids nasty white patches in openslide, see [here](https://github.com/openslide/openslide/issues/278)
 
 Just compile this from the master branch and install it in your system, the version should be 0.38.5.
 
-## Erros resolution
+## Errors resolution
 
 If you get an error with libtool just link the libtool from your system at the root of this project with:
+
 `ln -s /usr/local/bin/libtool ./libtool`
 
 after running `./autogen.sh`
