@@ -4,6 +4,14 @@ This version adds the patch which avoids nasty white patches in openslide, see [
 
 Just compile this from the master branch and install it in your system, the version should be 0.38.5.
 
+## Erros resolution
+
+If you get an error with libtool just link the libtool from your system at the root of this project with:
+`ln -s /usr/local/bin/libtool ./libtool`
+
+after running `./autogen.sh`
+
+---------------------------------------
 
 Pixman is a library that provides low-level pixel manipulation
 features such as image compositing and trapezoid rasterization.
