@@ -4,6 +4,23 @@ This version adds the patch which avoids nasty white patches in openslide, see [
 
 Just compile this from the master branch and install it in your system, the version should be 0.38.5.
 
+## How to install with a clean openslide/pyvips
+
+First compile/install this lib, then compile/install [Openslide from source](https://github.com/openslide/openslide/releases/download/v3.4.1/openslide-3.4.1.tar.gz).
+Finally compile [libvips](https://github.com/libvips/libvips/releases) by running:
+
+```
+autoreconf -i
+./configure --with-openslide
+make
+sudo make install
+```
+
+If using python, in the conda/virtual env do:
+`pip install openslide-python pyvips`
+
+Make sure your conda env doesn't contain libvips or libopenslide already in its lib/ folder.
+
 ## Errors resolution
 
 If you get an error with libtool just link the libtool from your system at the root of this project with:
